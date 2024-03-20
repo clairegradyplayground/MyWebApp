@@ -16,9 +16,9 @@ jobs:
           // The pattern for JIRA ticket format
           const jiraPattern = /[A-Z]+-\d+/g
           if (!jiraPattern.test(prTitle)) {
-            console.log('The PR title does not match JIRA ticket format!')
+            console.log('The PR title does not match JIRA ticket format! - new branch')
             // Fails the workflow
             core.setFailed('PR title does not match JIRA ticket format!')
           } else {
-            console.log('PR title format is correct.')
+            console.log('PR title format is correct. - new branch')
           }
