@@ -16,9 +16,9 @@ jobs:
           // The pattern for JIRA ticket format
           const jiraPattern = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/
           if (!jiraPattern.test(prTitle)) {
-            console.log('The PR title does not match JIRA ticket format! - test 1')
+            console.log('The PR title does not match JIRA ticket format!')
             // Fails the workflow
-            core.setFailed('PR title does not match JIRA ticket format! - test 1')
+            core.setFailed('PR title does not match JIRA ticket format!')
           } else {
             console.log('PR title format is correct. - new branch')
           }
