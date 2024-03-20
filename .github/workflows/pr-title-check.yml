@@ -20,5 +20,5 @@ jobs:
             // Fails the workflow
             core.setFailed('PR title does not match JIRA ticket format!')
           } else {
-            console.log('PR title format is correct. - new branch')
+            console.log('PR title format is correct.')
           }
