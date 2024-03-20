@@ -18,7 +18,7 @@ jobs:
           if (!jiraPattern.test(prTitle)) {
             console.log('The PR title does not match JIRA ticket format! - TEST 4')
             // Fails the workflow
-            core.setFailed('PR title does not match JIRA ticket format! - TEST 4')
+            core.setFailed('PR title does not match JIRA ticket format! - TEST 4 tEST 4 test 4')
           } else {
             console.log('PR title format is correct.')
           }
