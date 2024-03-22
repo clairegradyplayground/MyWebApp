@@ -21,7 +21,6 @@ jobs:
                     const prTitle = payload.pull_request.title;
                     const jiraRegex = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/;
                     
-
                     if (!jiraRegex.test(prTitle)){
                         const title = "Missing JIRA in the title";
                         if (github.context.payload.pull_request.labels.find(label => label.name === 'documentation')){
