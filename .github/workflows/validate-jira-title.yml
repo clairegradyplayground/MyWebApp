@@ -17,7 +17,7 @@ jobs:
               with:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
                 script: |
-                    const payload = github.context.payload
+                    const payload = context.payload
                     const prTitle = payload.pull_request.title;
                     const jiraRegex = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/;
                     #const titleStartsWithAJira = jiraRegex.test(prTitle);
