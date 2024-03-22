@@ -24,7 +24,7 @@ jobs:
 
                     if (!titleStartsWithAJira){
                         const title = "Missing JIRA in the title";
-                        if (github.context.payload.pull_request.labels.find(label => label.name === 'documentation')){
+                        if (github.context.event.pull_request.labels.find(label => label.name === 'documentation')){
                             const body = 'There was no JIRA found in the title. However, as these are documentation only changes it is not required.';
                             console.warn(` ${title} - ${body}`);
                         }else{
