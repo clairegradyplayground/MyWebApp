@@ -19,7 +19,7 @@ jobs:
                 script: |
                     const prTitle = github.context.payload.pull_request.title;
                     console.log(prTitle);
-                    const jiraRegec = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/;
+                    const jiraRegex = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/;
                     const titleStartsWithAJira = jiraRegex.test(prTitle);
 
                     if (!titleStartsWithAJira){
