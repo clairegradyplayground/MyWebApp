@@ -6,22 +6,23 @@ on:
 
 jobs:
     validate-jira-title:
+        name: Validate JIRA Title
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
 
             - name: Validate JIRA Title
-              uses: actions/github-script@v4
+              uses: actions/github-script@v7.0.1
+              env:
+                TITLE: ${{ github.event.pull_request.title }}
               with:
+                result-encoding: string
                 github-token: ${{ secrets.GITHUB_TOKEN }}
                 script: |
-                    const payload = context.payload
-                    const prTitle = payload.pull_request.title;
                     const jiraRegex = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/;
+                    const titleStartsWithAJira = jiraRegex.test(process.env.TITLE);
 
-                    if (!jiraRegex.test(prTitle)){
+                    if (!titleStartsWithAJira){
                         const title = "Missing JIRA in the title";
                         if (github.context.payload.pull_request.labels.find(label => label.name === 'documentation')){
                             const body = 'There was no JIRA found in the title. However, as these are documentation only changes it is not required.';
