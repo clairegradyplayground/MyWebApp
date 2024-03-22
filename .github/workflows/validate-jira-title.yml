@@ -25,14 +25,9 @@ jobs:
 
                     if (!titleStartsWithAJira){
                         const title = "Missing JIRA in the title";
-                        if (process.env.PR.find(label => label.name === 'documentation')){
-                            const body = 'There was no JIRA found in the title. However, as these are documentation only changes it is not required.';
-                            console.warn(` ${title} - ${body}`);
-                        }else{
-                            const body = 'The title of this PR needs to start with a JIRA e.g. [PROJECT-1234] My PR';
+                        const body = 'The title of this PR needs to start with a JIRA e.g. [PROJECT-1234] My PR';
                             console.error(` ${title} - ${body} `);
                             process.exit(1);
-                        }
                     }
 
                     
