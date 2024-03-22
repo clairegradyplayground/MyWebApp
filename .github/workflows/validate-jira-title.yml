@@ -17,12 +17,12 @@ jobs:
               with:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
                 script: |
-                    const payload = github.context.payload
+                    const payload = context.payload
                     const prTitle = payload.pull_request.title;
                     const jiraRegex = /^(Revert ")?\[(XBMAPI|XBMPUR|XBMSAL|XAAC|XBMSTA|SALXAA|XBR|XIT|MOBPLAT)-\d{1,4}\]/;
-                    const titleStartsWithAJira = jiraRegex.test(prTitle);
+                    #const titleStartsWithAJira = jiraRegex.test(prTitle);
 
-                    if (!titleStartsWithAJira){
+                    if (!jiraRegex.test(prTitle)){
                         const title = "Missing JIRA in the title";
                         if (github.context.payload.pull_request.labels.find(label => label.name === 'documentation')){
                             const body = 'There was no JIRA found in the title. However, as these are documentation only changes it is not required.';
