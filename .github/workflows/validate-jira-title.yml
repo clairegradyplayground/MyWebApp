@@ -23,12 +23,12 @@ jobs:
                     const titleStartsWithAJira = jiraRegex.test(process.env.TITLE);
                     const labels = github.context.payload.pull_request.labels.map(label => label.name);
 
-                    if (!titleStartsWithAJira && !labels.includes('documentation')){
+                    if (!titleStartsWithAJira and !labels.includes('documentation')){
                         const title = "Missing JIRA in the title";
                         const body = 'The title of this PR needs to start with a JIRA e.g. [PROJECT-1234] My PR';
                             console.error(` ${title} - ${body} `);
                             process.exit(1);
-                    }else if (!titleStartsWithAJira && labels.includes('documentation')){
+                    }else if (!titleStartsWithAJira and labels.includes('documentation')){
                         console.error("Your title does not include a JIRA but seeing it is only documentation that is ok");
                     }
 
