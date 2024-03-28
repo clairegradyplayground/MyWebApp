@@ -1,0 +1,5 @@
+/Users/clairegrady/MyWebApp/obj/Debug/net48/MyWebApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/clairegrady/MyWebApp/obj/Debug/net48/MyWebApp.AssemblyInfoInputs.cache
+/Users/clairegrady/MyWebApp/obj/Debug/net48/MyWebApp.AssemblyInfo.cs
+/Users/clairegrady/MyWebApp/obj/Debug/net48/MyWebApp.csproj.CoreCompileInputs.cache
+/Users/clairegrady/MyWebApp/obj/Debug/net48/MyWebApp.sourcelink.json
