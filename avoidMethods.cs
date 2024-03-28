@@ -38,7 +38,7 @@ class avoidMethods
     public static async Task MyTask()
     {
         await Task.Delay(1000);
-        Console.WriteLine("Task Completed");
+        Console.WriteLine("Task Completed - 2nd Branch");
     }
 
 
