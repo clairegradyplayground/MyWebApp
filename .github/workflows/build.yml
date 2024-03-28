@@ -1,0 +1,26 @@
+name: Build
+
+on:
+    push:
+        branches:
+            - main
+            - 2nd-branch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v2
+
+
+            - name: Setup .NET Core SDK
+              uses: actions/setup-dotnet@v1
+              with:
+                dotnet-version: '3.1'
+
+            - name: Restore NuGet Packages
+              run: dotnet restore
+
+            - name: Build Project
+              run: dotnet build --configuration Release
