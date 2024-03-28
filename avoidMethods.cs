@@ -28,8 +28,6 @@ class avoidMethods
 
 
 
-   
-
 
     public static void RunMyTask2()
     {
