@@ -1,7 +1,5 @@
 
-class avoidMethods{
-    public static async Task<int> RunTaskAsync(){
-        return await Task.Run(() => {
+
 
 class avoidMethods
 {
@@ -16,7 +14,6 @@ class avoidMethods
     }
 
 
-    public static void RunTask(){
     public static async void RunTask()
     {
 
@@ -30,9 +27,7 @@ class avoidMethods
     }
 
 
-    public static async void RunMyTask2()
-    {
-        await Task.Run(MyTask);
+   
 
     public static void RunMyTask2()
     {
@@ -68,4 +63,4 @@ class avoidMethods
         Task<int> task = Task.Run(() => 42);
         return task.Result.ToString();
     }
-
+}

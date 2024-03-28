@@ -1,19 +1,18 @@
+M:System.Threading.Tasks.Task.Run(System.Action);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task});Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.Tasks.TaskScheduler);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Action,System.Threading.CancellationToken);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Action,System.Threading.Tasks.TaskScheduler);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task{``0}});Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task{``0}},System.Threading.Tasks.TaskScheduler);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run``1(System.Func{``0});Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.CancellationToken);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.Tasks.TaskScheduler);Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.CancellationToken);Avoid using the Task.Run method
 
-M:System.Threading.Tasks.Task.Run(System.Action);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task});ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.CancellationToken);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task},System.Threading.Tasks.TaskScheduler);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Action,System.Threading.CancellationToken);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Action,System.Threading.Tasks.TaskScheduler);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task{``0}});ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run(System.Func{System.Threading.Tasks.Task{``0}},System.Threading.Tasks.TaskScheduler);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run``1(System.Func{``0});ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.CancellationToken);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.Tasks.TaskScheduler);ERR000 - Avoid using the Task.Run method
-M:System.Threading.Tasks.Task.Run``1(System.Func{``0},System.Threading.CancellationToken);ERR000 - Avoid using the Task.Run method
+M:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean);Avoid using the ConfigureAwait method
 
-M:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean);ERR001 - Avoid using the ConfigureAwait method
-
-P:System.Threading.Tasks.Task`1.Result;ERR002 - Avoid using the Result property to prevent potential deadlocks
+P:System.Threading.Tasks.Task`1.Result;Avoid using the Result property to prevent potential deadlocks
