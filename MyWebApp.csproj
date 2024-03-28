@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <WarningsAsErrors>$(WarningsAsErrors);ERR000;ERR001;ERR002</WarningsAsErrors>
+    <WarningsAsErrors>$(WarningsAsErrors);ERR000;ERR001;ERR002;</WarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
