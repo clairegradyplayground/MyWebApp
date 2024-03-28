@@ -7,7 +7,18 @@ class avoidMethods{
     }
 
     public static void RunTask(){
+        RunMyTask();
+        RunMyTask2();
+    }
+
+    public static void RunMyTask()
+    {
         Task.Run(MyTask);
+    }
+
+    public static async void RunMyTask2()
+    {
+        await Task.Run(MyTask);
     }
 
     public static async Task MyTask()
